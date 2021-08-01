@@ -3,7 +3,20 @@
 </mat-toolbar>
 
 <div class="container">
-  <form>
-    
+  <div class="base">
+    <h1>Write the name of the city</h1>
+  </div>
+  <form [formGroup]="tempText">
+    <div class="input">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter city name</mat-label>
+        <input
+          matInput
+          placeholder="Write the name of the city"
+          formControlName="text"
+        />
+      </mat-form-field>
+      <button class="btn" mat-button color="accent">See weather</button>
+    </div>
   </form>
 </div>
