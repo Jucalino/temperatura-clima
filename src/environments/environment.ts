@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  API: 'api.openweathermap.org/data/2.5/weather?q=units=metric&London&appid=873806ddf771a5daddd3ddebeefa6273&lang=pt_br'
-  //873806ddf771a5daddd3ddebeefa6273
+  API: 'http://api.weatherapi.com/v1/current.json?key=6986bf7260044956b36230926213107&'
+  //6986bf7260044956b36230926213107
 };
 
 /*

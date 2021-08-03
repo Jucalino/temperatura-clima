@@ -8,15 +8,17 @@ import { TemperaturaResponse } from './temperatureResponse';
 })
 export class TemperaturaServiceService {
 
-  private API = `${environment.API}`
+  private API = `${environment.API}&aqi=yes`
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    ) { }
 
-  temperatura(temp: string){
+  temperatura(cidade: string){
     const params ={
-      text: temp
+      q: cidade  
     }
 
-    return this.http.get<TemperaturaResponse>(this.API)
+    return this.http.get<TemperaturaResponse>(this.API, {params: params})
   }
 }

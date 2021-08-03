@@ -1,17 +1,15 @@
-export interface TemperaturaResponse{
-    weather: [
-    {
-      id: number,
-      main: string,
-      description: string,
-      icon: any
-    }
-  ],
-  main: {
-    temp: number,
-    temp_min: number,
-    temp_max: number,
-    humidity: number,
+export interface TemperaturaResponse {
+  location: {
+    name: string;
+    region: string;
+    country: string;
+    tz_id: string;
+    localtime: number;
   },
+  current: {
+    temp_c: number,
+    humidity: number,
+    maxtemp_c: number,
+    mintemp_c: number
+  }
 }
-

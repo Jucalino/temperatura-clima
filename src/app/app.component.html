@@ -16,7 +16,24 @@
           formControlName="text"
         />
       </mat-form-field>
-      <button class="btn" mat-button color="accent">See weather</button>
+      <button class="btn" mat-button color="accent" (click)="onSubmit()">
+        See weather
+      </button>
     </div>
   </form>
+  <div class="card" *ngIf="res">
+    <mat-card id="resposta">
+      <h2>
+        {{ resultado.location.name }} 🏙️
+      </h2>
+      <h3>
+        The state is: {{ resultado.location.region }} 🌁
+      </h3>
+      <h3>
+        The country is: {{ resultado.location.country }} 🏁
+      </h3>
+      <p>The temperature is: {{ resultado.current.temp_c }}° 🌡️</p>
+      <p>The humidity is: {{ resultado.current.humidity }} ☁️</p>
+    </mat-card>
+  </div>
 </div>
