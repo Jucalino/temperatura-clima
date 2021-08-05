@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  API: 'http://api.weatherapi.com/v1/current.json?key=6986bf7260044956b36230926213107&'
-  //6986bf7260044956b36230926213107
+  API: 'http://api.weatherapi.com/v1',
+  KEY: '6986bf7260044956b36230926213107'
 };
 
 /*

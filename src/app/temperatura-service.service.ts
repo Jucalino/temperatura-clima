@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { TemperaturaResponse } from './temperatureResponse';
+import { apiTemperaturaResponse } from './temperatureResponse';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TemperaturaServiceService {
 
-  private API = `${environment.API}&aqi=yes`
+  private API = `${environment.API}/current.json`
 
   constructor(
     private http: HttpClient,
     ) { }
 
-  temperatura(cidade: string){
+  buscarTemperatura(cidade: string){
     const params ={
-      q: cidade  
+      q: cidade,
+      key: `${environment.KEY}`,
+      aqi: 'yes'
     }
 
-    return this.http.get<TemperaturaResponse>(this.API, {params: params})
+    return this.http.get<apiTemperaturaResponse>(this.API, {params: params})
   }
 }

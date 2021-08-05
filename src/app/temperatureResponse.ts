@@ -1,4 +1,4 @@
-export interface TemperaturaResponse {
+export interface apiTemperaturaResponse {
   location: {
     name: string;
     region: string;

@@ -1,0 +1,24 @@
+<div class="container">
+<form [formGroup]="form">
+    <div class="input">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter city name</mat-label>
+        <input
+          matInput
+          placeholder="Write the name of the city"
+          formControlName="input"
+        />
+      </mat-form-field>
+    </div>
+    <button
+      mat-stroked-button
+      class="btn"
+      mat-button
+      color="accent"
+      mat-stroked-button aria-label="Show an example snack-bar"
+      (click)="onSubmit()"
+    >
+      See weather
+    </button>
+  </form>
+</div>

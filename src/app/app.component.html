@@ -2,38 +2,5 @@
   <span>Weather temperature</span>
 </mat-toolbar>
 
-<div class="container">
-  <div class="base">
-    <h1>Write the name of the city</h1>
-  </div>
-  <form [formGroup]="tempText">
-    <div class="input">
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Enter city name</mat-label>
-        <input
-          matInput
-          placeholder="Write the name of the city"
-          formControlName="text"
-        />
-      </mat-form-field>
-      <button class="btn" mat-button color="accent" (click)="onSubmit()">
-        See weather
-      </button>
-    </div>
-  </form>
-  <div class="card" *ngIf="res">
-    <mat-card id="resposta">
-      <h2>
-        {{ resultado.location.name }} 🏙️
-      </h2>
-      <h3>
-        The state is: {{ resultado.location.region }} 🌁
-      </h3>
-      <h3>
-        The country is: {{ resultado.location.country }} 🏁
-      </h3>
-      <p>The temperature is: {{ resultado.current.temp_c }}° 🌡️</p>
-      <p>The humidity is: {{ resultado.current.humidity }} ☁️</p>
-    </mat-card>
-  </div>
-</div>
+<app-cidade-area></app-cidade-area>
+<app-card-component></app-card-component>
