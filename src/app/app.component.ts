@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  nomeCidade: string;
+
   constructor() { }
 
-  ngOnInit() {
-    
+  ngOnInit() { 
+  }
+
+  pegarCidade(nomeCidade: string) {
+    this.nomeCidade = nomeCidade
   }
 }

@@ -1,0 +1,13 @@
+<div class="container mat-elevation-z10">
+  <form [formGroup]="formCidade">
+    <h1>Write the name of the city</h1>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="London" formControlName="nomeCidade" />
+      <mat-error *ngIf="formCidade.get('nomeCidade')?.hasError('required')">
+        City is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onClick()">Ver temperatura</button>
+  </form>
+</div>

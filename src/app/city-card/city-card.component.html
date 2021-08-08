@@ -1,0 +1,13 @@
+<div class="wrapper-loading" *ngIf="loading">
+  <mat-spinner [diameter]="60"></mat-spinner>
+</div>
+
+<div class="card mat-elevation-z10" *ngIf="resultado && !loading">
+  <mat-card id="resposta">
+    <h2>{{ resultado.location.name }} 🏙️</h2>
+    <h3>The state is: {{ resultado.location.region }} 🌁</h3>
+    <h3>The country is: {{ resultado.location.country }} 🏁</h3>
+    <p>The temperature is: {{ resultado.current.temp_c }}° 🌡️</p>
+    <p>The humidity is: {{ resultado.current.humidity }} ☁️</p>
+  </mat-card>
+</div>

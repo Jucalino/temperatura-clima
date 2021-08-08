@@ -8,21 +8,23 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { CidadeAreaComponent } from './cidade-area/cidade-area.component';
-import { CardComponentComponent } from './card-component/card-component.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { FormCidadeComponent } from './form-cidade/form-cidade.component';
+import { CityCardComponent } from './city-card/city-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CidadeAreaComponent,
-    CardComponentComponent
+    FormCidadeComponent,
+    CityCardComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     FormsModule,

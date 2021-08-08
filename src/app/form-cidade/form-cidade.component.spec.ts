@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CidadeAreaComponent } from './cidade-area.component';
+import { FormCidadeComponent } from './form-cidade.component';
 
-describe('CidadeAreaComponent', () => {
-  let component: CidadeAreaComponent;
-  let fixture: ComponentFixture<CidadeAreaComponent>;
+describe('FormCidadeComponent', () => {
+  let component: FormCidadeComponent;
+  let fixture: ComponentFixture<FormCidadeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CidadeAreaComponent ]
+      declarations: [ FormCidadeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CidadeAreaComponent);
+    fixture = TestBed.createComponent(FormCidadeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

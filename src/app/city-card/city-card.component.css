@@ -1,0 +1,15 @@
+
+.card {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.wrapper-loading{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 10px;
+}

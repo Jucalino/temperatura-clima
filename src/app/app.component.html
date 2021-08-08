@@ -2,5 +2,7 @@
   <span>Weather temperature</span>
 </mat-toolbar>
 
-<app-cidade-area></app-cidade-area>
-<app-card-component></app-card-component>
+<div class="wrapper-form">
+  <app-form-cidade (enviarCidade)="pegarCidade($event)"></app-form-cidade>
+  <app-city-card [nomeCidade]="nomeCidade"></app-city-card>
+</div>
